@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:root@db:5432/credit_approval
+      - DOCKER_ENV=true
+    depends_on:
+      - db
+    volumes:
+      - ./:/app
+    command: >
+      sh -c "./wait-for-it.sh db:5432 -- python init_database.py && python -m src.app"
+
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=credit_approval
+    ports:
+      - "5433:5432"
+
+volumes:
+  postgres_data:
