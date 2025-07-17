@@ -12,8 +12,9 @@ services:
       - db
     volumes:
       - ./:/app
+      - ./wait-for-it.sh:/app/wait-for-it.sh
     command: >
-      sh -c "/wait-for-it.sh db:5432 -- python init_database.py && python -m src.app"
+      sh -c "chmod +x /app/wait-for-it.sh && /app/wait-for-it.sh db:5432 -- python init_database.py && python -m src.app"
 
   db:
     image: postgres:13
