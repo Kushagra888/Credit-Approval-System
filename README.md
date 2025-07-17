@@ -113,13 +113,6 @@ src/
 - **URL**: `/view-loans/<customer_id>`
 - **Method**: `GET`
 
-## Testing
-
-Run the tests using:
-
-```
-python -m src.tests.test_runner
-```
 
 ## Features
 
