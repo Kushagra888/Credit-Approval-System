@@ -2,7 +2,10 @@
 
 A robust backend API system for credit approval and loan management. This system helps financial institutions evaluate customer creditworthiness and manage loan applications efficiently.
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue.svg)](https://github.com/Kushagra888/Credit-Approval-System)
+👉 [GitHub Repository](https://github.com/Kushagra888/Credit-Approval-System)
+
+👉 [Click to watch demo video](https://drive.google.com/file/d/1265K_M07atwfeh9hqeZYwl5wTdiVXDQz/view?usp=sharing)
+
 
 ## Project Structure
 
